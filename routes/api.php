@@ -25,7 +25,7 @@ Route::prefix('login')->group(function(){
 
 
 Route::get('/user', [UsersController::class , 'showProfile'])->middleware('auth:sanctum');
-Route::put('/user', [UsersController::class , 'updateProfile'])->middleware('auth:sanctum');
+Route::post('/user', [UsersController::class , 'updateProfile'])->middleware('auth:sanctum');
 Route::delete('/user', [UsersController::class , 'deleteProfile'])->middleware('auth:sanctum');
 Route::get('/user/devices', [DeviceController::class , 'listDevices'])->middleware('auth:sanctum');
 

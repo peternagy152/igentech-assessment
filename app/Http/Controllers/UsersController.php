@@ -163,7 +163,7 @@ class UsersController extends Controller
                 "name" => $user->name , 
                 "email" => $user->email , 
                 "phone" => $user->phone , 
-                "profile_img" => $user->getMedia('users-images') ,
+                "profile_img" => $user->getMedia('users-images')[0]->original_url,
 
             ]
         ] , 200);
